@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressedActions" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="TOP_CENTER" maxWidth="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#setVentas" prefHeight="50.0" prefWidth="150.0" text="Ventas" />
+                  <Button layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#setInventario" prefHeight="50.0" prefWidth="150.0" text="Inventario" />
+                  <Button layoutX="10.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#setClientes" prefHeight="50.0" prefWidth="150.0" text="Clientes" />
+                  <Button layoutX="10.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="50.0" prefWidth="150.0" text="Salir">
+                     <VBox.margin>
+                        <Insets top="320.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="60.0" />
+               </padding></VBox>
+            <AnchorPane prefHeight="150.0" prefWidth="1450.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                           <children>
+                              <TextField fx:id="barCodeReader" promptText="Inserte un código de barras" />
+                              <ListView fx:id="listView" minHeight="800.0" minWidth="900.0" prefHeight="200.0" prefWidth="960.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ListView>
+                              <Label fx:id="help" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font></Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox minWidth="450.0" prefHeight="853.0" prefWidth="450.0" spacing="20.0">
+                           <children>
+                              <Label fx:id="title" alignment="CENTER" prefWidth="450.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Label>
+                              <AnchorPane minHeight="500.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-border-color: #bfbebf;">
+                                 <children>
+                                    <VBox fx:id="infoBox" alignment="TOP_CENTER" minHeight="500.0" minWidth="450.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="20.0" top="20.0" />
+                                 </HBox.margin></AnchorPane>
+                              <ListView fx:id="notificationList" maxHeight="150.0" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                              <Label fx:id="total" alignment="CENTER" minHeight="150.0" minWidth="450.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="64.0" />
+                                 </font></Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="30.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin></HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</StackPane>
