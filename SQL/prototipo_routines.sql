@@ -37,8 +37,7 @@ apellidoMaterno varchar(40),
 puestoCliente varchar(30), 
 contratistaCliente varchar(60),
 creditoCliente float(10),
-adeudoCliente float(10),
-fotoCliente varchar(100)
+adeudoCliente float(10)
 )
 BEGIN
 	INSERT INTO cliente(nombre, apellidoP,apellidoM,puesto,contratista,credito,adeudo,estado,foto) VALUES(
@@ -49,8 +48,7 @@ BEGIN
     contratistaCliente,
     creditoCliente,
     adeudoCliente,
-    "ACTIVO",
-    fotoCliente
+    "ACTIVO"
     );
 END ;;
 DELIMITER ;
