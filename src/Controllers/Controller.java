@@ -70,6 +70,7 @@ public class Controller implements Initializable {
         barCodeReader.setVisible(false);
         notificationList.setMinHeight(293);
         total.setMinHeight(0);
+        notificationList.setVisible(true);
         help.setText("F1: Registrar cliente");
         Cliente.getActiveClients(notificationList);
         Cliente.getAverageCustomerSpend(notificationList);
@@ -86,6 +87,7 @@ public class Controller implements Initializable {
         notificationList.setMinHeight(293);
         total.setMinHeight(0);
         help.setText("F1: Registrar producto");
+        notificationList.setVisible(true);
         Producto.getFiveMostPopular(notificationList);
         Producto.getFiveLessPopular(notificationList);
 
